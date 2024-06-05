@@ -1,0 +1,93 @@
+RewriteEngine On
+RewriteBase /
+
+#RUTAS PARA SITE
+RewriteRule ^payment$ index.php?c=site&a=payment
+RewriteRule ^ticket$ index.php?c=stripe&a=ticket
+
+#RUTAS PARA LOGIN
+RewriteRule ^admin$ index.php?c=app&a=login
+RewriteRule ^app/index$ index.php?c=app&a=verify
+RewriteRule ^endsession$ index.php?c=app&a=endsession
+
+#RUTAS PARA EL ADMINISTRADOR
+RewriteRule ^admin/index$ index.php?c=admin&a=index
+RewriteRule ^admin/users$ index.php?c=admin&a=users
+RewriteRule ^admin/newuser$ index.php?c=admin&a=newuser
+RewriteRule ^admin/adduser$ index.php?c=admin&a=adduser
+RewriteRule ^admin/modifyuser/([0-9]+)$ index.php?c=admin&a=modifyuser&id=$1
+RewriteRule ^admin/deleteuser/([0-9]+)$ index.php?c=admin&a=deleteuser&id=$1
+RewriteRule ^admin/saveuser$ index.php?c=admin&a=saveuser
+RewriteRule ^admin/reward$ index.php?c=admin&a=reward
+RewriteRule ^admin/rewards$ index.php?c=admin&a=rewards
+RewriteRule ^admin/newreward$ index.php?c=admin&a=newreward
+RewriteRule ^admin/newcategory/([^/]+)$ index.php?c=admin&a=newcategory&id=$1
+RewriteRule ^admin/addreward$ index.php?c=admin&a=addreward
+RewriteRule ^admin/modifyreward/([0-9]+)$ index.php?c=admin&a=modifyreward&id=$1
+RewriteRule ^admin/savereward$ index.php?c=admin&a=savereward
+RewriteRule ^admin/deletereward/([0-9]+)$ index.php?c=admin&a=deletereward&id=$1
+RewriteRule ^admin/authorizedrewards$ index.php?c=admin&a=authorizedrewards
+RewriteRule ^admin/pendingrewards$ index.php?c=admin&a=pendingrewards
+RewriteRule ^admin/rejectedrewards$ index.php?c=admin&a=rejectedrewards
+RewriteRule ^admin/authorize/([0-9]+)$ index.php?c=admin&a=authorize&id=$1
+RewriteRule ^admin/deny/([0-9]+)$ index.php?c=admin&a=deny&id=$1
+RewriteRule ^admin/active/([0-9]+)$ index.php?c=admin&a=active&id=$1
+RewriteRule ^admin/disable/([0-9]+)$ index.php?c=admin&a=disable&id=$1
+RewriteRule ^admin/categories$ index.php?c=admin&a=categories
+RewriteRule ^admin/newcategory$ index.php?c=admin&a=newcategory
+RewriteRule ^admin/addcategory$ index.php?c=admin&a=addcategory
+RewriteRule ^admin/savecategory$ index.php?c=admin&a=savecategory
+RewriteRule ^admin/modifycategory/([0-9]+)$ index.php?c=admin&a=modifycategory&id=$1
+RewriteRule ^admin/deletecategory/([0-9]+)$ index.php?c=admin&a=deletecategory&id=$1
+RewriteRule ^admin/participants$ index.php?c=admin&a=participants
+RewriteRule ^admin/profile$ index.php?c=admin&a=profile
+RewriteRule ^admin/changeprofile$ index.php?c=admin&a=changeprofile
+RewriteRule ^admin/saveprofile$ index.php?c=admin&a=saveprofile
+RewriteRule ^admin/changepassword$ index.php?c=admin&a=changepassword
+RewriteRule ^admin/savepassword$ index.php?c=admin&a=savepassword
+ RewriteRule ^admin/changeimagesreward$ index.php?c=admin&a=changeimagesreward
+ RewriteRule ^admin/saveimagesreward$ index.php?c=admin&a=saveimagesreward
+ RewriteRule ^admin/changeprofilephoto$ index.php?c=admin&a=changeprofilephoto
+ RewriteRule ^admin/saveprofilephoto$ index.php?c=admin&a=saveprofilephoto
+ RewriteRule ^admin/config$ index.php?c=admin&a=config
+ RewriteRule ^admin/changeimagespage$ index.php?c=admin&a=changeimagespage
+ RewriteRule ^admin/saveimagepage$ index.php?c=admin&a=saveimagepage
+ RewriteRule ^admin/changecolors$ index.php?c=admin&a=changecolors
+ RewriteRule ^admin/savecolors$ index.php?c=admin&a=savecolors
+ RewriteRule ^admin/company$ index.php?c=admin&a=company
+ RewriteRule ^admin/changelogo$ index.php?c=admin&a=changelogo
+ RewriteRule ^admin/savelogo$ index.php?c=admin&a=savelogo
+ RewriteRule ^admin/namecompany$ index.php?c=admin&a=namecompany
+ RewriteRule ^admin/savename$ index.php?c=admin&a=savename
+ RewriteRule ^admin/stripe$ index.php?c=admin&a=stripe
+ RewriteRule ^admin/modifystripe$ index.php?c=admin&a=modifystripe
+ RewriteRule ^admin/savestripekeys$ index.php?c=admin&a=savestripekeys
+
+#RUTAS PARA EL SUPER USUARIO
+RewriteRule ^user/index$ index.php?c=user&a=index
+RewriteRule ^user/categories$ index.php?c=user&a=categories
+RewriteRule ^user/newcategory$ index.php?c=user&a=newcategory
+RewriteRule ^user/addcategory$ index.php?c=user&a=addcategory
+RewriteRule ^user/savecategory$ index.php?c=user&a=savecategory
+RewriteRule ^user/modifycategory/([0-9]+)$ index.php?c=user&a=modifycategory&id=$1
+RewriteRule ^user/deletecategory/([0-9]+)$ index.php?c=user&a=deletecategory&id=$1
+RewriteRule ^user/images$ index.php?c=user&a=images
+RewriteRule ^user/newimage$ index.php?c=user&a=newimage
+RewriteRule ^user/addimage$ index.php?c=user&a=addimage
+RewriteRule ^user/deleteimage/([0-9]+)$ index.php?c=user&a=deleteimage&id=$1
+RewriteRule ^user/rewards$ index.php?c=user&a=rewards
+RewriteRule ^user/newreward$ index.php?c=user&a=newreward
+RewriteRule ^user/addreward$ index.php?c=user&a=addreward
+RewriteRule ^user/modifyreward/([0-9]+)$ index.php?c=user&a=modifyreward&id=$1
+RewriteRule ^user/deletereward/([0-9]+)$ index.php?c=user&a=deletereward&id=$1
+RewriteRule ^user/savereward$ index.php?c=user&a=savereward
+RewriteRule ^user/profile$ index.php?c=user&a=profile
+RewriteRule ^user/changeprofile$ index.php?c=user&a=changeprofile
+RewriteRule ^user/saveprofile$ index.php?c=user&a=saveprofile
+RewriteRule ^user/changepassword$ index.php?c=user&a=changepassword
+RewriteRule ^user/savepassword$ index.php?c=user&a=savepassword
+ RewriteRule ^user/changeimagesreward$ index.php?c=user&a=changeimagesreward
+ RewriteRule ^user/saveimagesreward$ index.php?c=user&a=saveimagesreward
+  RewriteRule ^user/changeprofilephoto$ index.php?c=user&a=changeprofilephoto
+ RewriteRule ^user/saveprofilephoto$ index.php?c=user&a=saveprofilephoto
+ RewriteRule ^user/participants$ index.php?c=user&a=participants [L]

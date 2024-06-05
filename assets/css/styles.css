@@ -1,0 +1,137 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	--main-bg:#2a737f;
+	--btn-color:#43a6a3;
+	--blue: #2E86C1;
+}
+
+body{
+	height: 100vh!important;
+	background: linear-gradient(rgba(42, 115, 127,0.5), rgba(42, 115, 127,0.5)), url('../media/fondo.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+/*SITE*/
+.main-site{
+	height: auto;
+	border: 2px #fff dashed;
+	background: rgba(42, 115, 127,0.7);
+	padding: 30px;
+}
+.btn-tribuna{
+	background: var(--btn-color)!important;
+	color: #fff!important;
+	font-weight: bold!important;
+}
+.btn-tribuna2{
+	background: var(--main-bg)!important;
+	color: #fff!important;
+	font-weight: bold!important;
+}
+.main-text{
+	text-align: justify!important;
+}
+h1,h2,h3{
+	color: #fff!important;
+}
+h1{
+	font-size: 40px!important;
+}
+h2{
+	font-size: 24px!important;
+}
+h3{
+	font-size: 18px!important;
+}
+h4{
+	color: var(--blue)!important;
+}
+h4{
+	font-size: 16px;
+}
+h5{
+	font-size: 14px;
+}
+h6{
+	font-size: 12px;
+}
+.site-image{
+	width: 50%;
+}
+.boleto{
+	background:  #fff;
+	padding: 15px;
+	border-radius: 15px;
+}
+.content{
+	border: 2px solid var(--btn-color);
+	padding: 15px;
+	border-radius: 15px;
+}
+.separador{
+	width: 100%;
+	border-bottom: 2px solid var(--btn-color);
+}
+.separador-2{
+	width: 60%;
+	border-bottom: 1px solid var(--btn-color);
+}
+.details{
+	background: #e7e7e7;
+	padding: 15px;
+	border-radius: 10px;
+}
+/*PAYMENT*/
+.transparent-input{
+	background:  transparent!important;
+	border: none!important;
+	border-bottom: 3px solid var(--btn-color)!important;
+	color: #fff!important;
+}
+.transparent-input::placeholder{
+	color: #fff!important;
+}
+/*LOGIN*/
+.form-login{
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 25px #222;
+    border-radius: 10px;
+    backdrop-filter: blur(12px);
+}
+.icons{
+	font-size: 25px!important;
+	margin-right: 10px;
+}
+.form-login-error{
+	border: 2px solid red;
+}
+.icons-error{
+	color: red;
+	font-size: 30px;
+}
+/*MEDIA QUERY*/
+/*SITE*/
+@media (max-width: 768px){
+	.site-image{
+		width: 40%;
+	}
+}
+
+@media screen and (max-height: 900px) {
+	body {
+		height: auto;
+	}
+}
+
+@media (max-width: 575px) {
+	.boleto {
+		width: 100%;
+	}
+}
